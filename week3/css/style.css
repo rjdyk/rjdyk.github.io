@@ -1,0 +1,41 @@
+body{
+    background-color:#FFFFFF;
+	max-width: 960px;
+	margin: auto;
+}
+
+nav li{
+	text-decoration: none;
+	display:inline;
+	background-color: white;
+	color: black;
+}
+
+.hidden {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+.profile-pic{
+	width: 20%;
+}
+
+.current-tab{
+	font-style: italic;
+}
+
+.movie-poster{
+	width:150px;
+}
+
+.experience-image{
+	max-width: 50%;
+}
+
+.book-cover{
+	height: 150px;
+}
