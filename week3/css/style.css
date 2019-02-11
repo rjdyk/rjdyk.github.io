@@ -1,41 +1,104 @@
+h1{
+	font-size: 2em;
+}
+
 body{
-    background-color:#FFFFFF;
+    background-color:#FFFFF0;
 	max-width: 960px;
 	margin: auto;
 }
 
-nav li{
-	text-decoration: none;
-	display:inline;
-	background-color: white;
-	color: black;
+nav{
+	display: flex;
+	flex-direction:row;
+	background-color: #161457;
 }
 
-.hidden {
-	position:absolute;
-	left:-10000px;
-	top:auto;
-	width:1px;
-	height:1px;
-	overflow:hidden;
+nav a{
+	text-decoration: none;
+	text-align: center;
+	display:inline;
+	color: white;
+	padding: 10px;
+}
+
+nav a.current-tab{
+	background-color: #24208A;
+}
+nav a:hover {
+	background-color: #312DBF;
+}
+
+a.hidden{
+  position: relative;
+  left: -2000px;
+}
+a.hidden:focus{
+  position: static;
+}
+
+
+.courselist p{
+	text-align: center;
 }
 
 .profile-pic{
-	width: 20%;
-}
-
-.current-tab{
-	font-style: italic;
+	width: 100%;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 100% 100% 100% 100%;
 }
 
 .movie-poster{
-	width:150px;
+	width:80%;
 }
 
 .experience-image{
-	max-width: 50%;
+	width: 20em;
 }
 
-.book-cover{
-	height: 150px;
+footer{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 4px;
+  background-color: #161457;
+  padding-bottom: 5px;
 }
+
+.intro {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.intro > p{
+	justify-content: center;
+	top: 50%;
+	bottom: 50%;
+}
+
+.book-grid{
+	display: grid;
+    grid-template-columns: 33% 34% 33%;
+    background: #FFFFF0;
+
+}
+.book-grid > img{
+	padding: 5%;
+	width: 80%;
+}
+
+.movie-grid{
+	display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background: #FFFFF0;
+}
+
+.movie-grid > img{
+	padding: 2%;
+	width: 95%;
+}
+.movie-grid > img:hover{
+	opacity: .4;
+}
+
