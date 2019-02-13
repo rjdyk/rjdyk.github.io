@@ -1,0 +1,116 @@
+h1, p{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+h1{
+	font-size: 2em;
+}
+
+body{
+    background-color:#FFFFF0;
+	max-width: 960px;
+	margin: auto;
+}
+
+nav{
+	display: flex;
+	flex-direction:row;
+	background-color: #161457;
+}
+
+nav a{
+	font-family: 'Bree Serif', serif;
+	text-decoration: none;
+	text-align: center;
+	display:inline;
+	color: white;
+	padding: 10px;
+}
+
+nav a.current-tab{
+	background-color: #24208A;
+}
+nav a:hover {
+	background-color: #312DBF;
+}
+
+a.hidden{
+  position: relative;
+  left: -2000px;
+}
+a.hidden:focus{
+  position: static;
+}
+
+
+.courselist p{
+	text-align: center;
+}
+
+.profile-pic{
+	width: 100%;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 100% 100% 100% 100%;
+}
+
+.movie-poster{
+	width:80%;
+}
+
+.experience-image{
+	width: 20em;
+}
+
+footer{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  padding-bottom: 10px;
+  background-image: url("../images/cityscape-cropped.jpg");
+  background-size:cover;
+}
+footer > p{
+	padding: 5px;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.intro > p{
+	justify-content: center;
+	top: 50%;
+	bottom: 50%;
+}
+
+.book-grid{
+	display: grid;
+    grid-template-columns: 33% 34% 33%;
+    background: #FFFFF0;
+
+}
+.book-grid > img{
+	padding: 5%;
+	width: 80%;
+}
+.book-grid > img:hover{
+	opacity: .4;
+}
+
+
+.movie-grid{
+	display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background: #FFFFF0;
+}
+
+.movie-grid > img{
+	padding: 2%;
+	width: 95%;
+}
+.movie-grid > img:hover{
+	opacity: .4;
+}
