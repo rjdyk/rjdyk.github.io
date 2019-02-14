@@ -5,6 +5,13 @@ h1, p{
 h1{
 	font-size: 2em;
 }
+h2{
+	font-size: 1.5em;
+}
+h3{
+	font-size: 1.2em;
+}
+
 
 body{
     background-color:#FFFFF0;
@@ -100,6 +107,12 @@ footer > p{
 	opacity: .4;
 }
 
+
+.fav-movie-grid{
+	display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    background: #FFFFF0;
+}
 
 .movie-grid{
 	display: grid;
