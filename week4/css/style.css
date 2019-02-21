@@ -1,5 +1,11 @@
-h1, p{
+/*f9f7f7
+dbe2ef
+3f72af
+112d4e*/
+h1, h2, h3, h4, h5, h6, p{
 	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	padding-bottom: 
 }
 
 h1{
@@ -14,15 +20,23 @@ h3{
 
 
 body{
-    background-color:#FFFFF0;
-	max-width: 960px;
+  background-image: url("../images/cityscape.jpg");
+  background-size: cover;
+}
+
+main, nav, footer{
+	background-color:#f9f7f7;
+	width: 1280px;
+	padding: 0px 20px 20px 20px;
 	margin: auto;
 }
 
 nav{
 	display: flex;
 	flex-direction:row;
-	background-color: #161457;
+	background-color: #112d4e;
+	padding: 0px 20px 0px 20px;
+
 }
 
 nav a{
@@ -35,10 +49,10 @@ nav a{
 }
 
 nav a.current-tab{
-	background-color: #24208A;
+	background-color: #3f72af;
 }
 nav a:hover {
-	background-color: #312DBF;
+	background-color: #3f72af;
 }
 
 a.hidden{
@@ -71,12 +85,12 @@ a.hidden:focus{
 
 footer{
   display: block;
-  color: white;
+  background-color: #dbe2ef;
   text-align: center;
-  padding: 8px;
-  padding-bottom: 10px;
-  background-image: url("../images/cityscape-cropped.jpg");
-  background-size:cover;
+  padding: 10px 20px 10px 20px;
+
+/*  background-image: url("../images/cityscape-cropped.jpg");
+  background-size:cover;*/
 }
 footer > p{
 	padding: 5px;
@@ -96,10 +110,9 @@ footer > p{
 .book-grid{
 	display: grid;
     grid-template-columns: 33% 34% 33%;
-    background: #FFFFF0;
 
 }
-.book-grid > img{
+.book-grid > img{s
 	padding: 5%;
 	width: 80%;
 }
@@ -108,22 +121,28 @@ footer > p{
 }
 
 
-.fav-movie-grid{
-	display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    background: #FFFFF0;
-}
-
 .movie-grid{
 	display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    background: #FFFFF0;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 .movie-grid > img{
 	padding: 2%;
 	width: 95%;
+	height: auto;
 }
 .movie-grid > img:hover{
 	opacity: .4;
+}
+
+.what-im-up-to{
+	grid-template-rows: 5em 5em 5em 5em;
+}
+
+.experience{
+	padding: 10px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#112d4e;
+	margin:5px;
 }
