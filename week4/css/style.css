@@ -153,8 +153,9 @@ footer > p{
 
 .recommendation{
 	padding: 10px;
+	margin: 10px;
 	border-style:solid;
-	border-width:3px;
+	border-width:1px;
 	border-color:#112d4e;
 }
 .recomendation h2 {
@@ -247,7 +248,7 @@ footer > p{
 		justify-content: center;
 		text-decoration: none;
 		background-color: #dbe2ef;
-		color: #161457
+		color: #161457;
 	}
 
 	nav a.current-tab{
