@@ -1,0 +1,298 @@
+/*f9f7f7
+dbe2ef
+3f72af
+112d4e*/
+
+h1, h2, h3, h4, h5, h6, p, form{
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+	font-size: 2em;
+	padding: 20%, 0%, 20%, 0%;
+}
+h2{
+	font-size: 1.5em;
+}
+h3{
+	font-size: 1.2em;
+}
+
+
+body{
+  background-image: url("../images/cityscape.jpg");
+  background-size: cover;
+  line-height: auto;
+}
+
+main, nav, footer{
+	background-color:#f9f7f7;
+	width: 90%;
+	padding: 0px 20px 20px 20px;
+	margin: auto;
+}
+
+nav{
+	display: flex;
+	flex-direction:row;
+	background-color: #161457;
+	padding: 0px 20px 0px 20px;
+}
+
+nav a{
+	font-family: 'Bree Serif', serif;
+	text-decoration: none;
+	text-align: center;
+	display:inline;
+	color: white;
+	padding: 10px;
+}
+
+nav a.current-tab{
+	background-color: #24208A;
+}
+nav a:hover {
+	background-color: #312DBF;
+}
+
+a{
+	text-decoration: none;
+}
+a.hidden{
+  position: relative;
+  left: -2000px;
+}
+a.hidden:focus{
+  position: static;
+}
+
+
+.courselist p{
+	text-align: center;
+}
+
+.profile-pic{
+	width: 100%;
+	border-width: 2px;
+	border-color: black;
+	border-radius: 100% 100% 100% 100%;
+}
+
+.movie-poster{
+	width:80%;
+}
+
+.experience-image{
+	width: 20em;
+}
+
+footer{
+  display: block;
+  background-color: #dbe2ef;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+
+/*  background-image: url("../images/cityscape-cropped.jpg");
+  background-size:cover;*/
+}
+footer > p{
+	padding: 5px;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.intro > p{
+	justify-content: center;
+	top: 50%;
+	bottom: 50%;
+}
+
+.book-grid{
+	display: grid;
+    grid-template-columns: 33% 34% 33%;
+
+}
+.book-grid > img{
+	object-fit: cover;
+	padding: 5%;
+	width: 80%;
+}
+.book-grid > img:hover{
+	opacity: .4;
+}
+
+
+.movie-grid{
+	display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.movie-grid > img{
+	padding: 2%;
+	width: 95%;
+	height: auto;
+}
+.movie-grid > img:hover{
+	opacity: .4;
+}
+
+.what-im-up-to{
+	grid-template-rows: 5em 5em 5em 5em;
+}
+
+.experience{
+	padding: 10px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#112d4e;
+	margin:5px;
+}
+
+.recommendation{
+	padding: 10px;
+	margin: 10px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#112d4e;
+}
+.recomendation h2 {
+	padding-bottom: 10px;
+}
+
+@media only screen and ((max-width:861px) or (orientation: landscape) {
+
+	main, nav, footer{
+		background-color:#f9f7f7;
+		width: 90%;
+		padding: 0px 20px 20px 20px;
+		margin: auto;
+	}
+
+	nav{
+		display: flex;
+		flex-direction:row;
+		background-color: #161457;
+		padding: 0px 20px 0px 20px;
+	}
+
+	nav a{
+		font-family: 'Bree Serif', serif;
+		text-decoration: none;
+		text-align: center;
+		display:inline;
+		color: white;
+		padding: 10px;
+	}
+
+	nav a.current-tab{
+		background-color: #24208A;
+	}
+	nav a:hover {
+		background-color: #312DBF;
+	}
+
+
+	footer{
+		display: block;
+		background-color: #dbe2ef;
+		text-align: center;
+		/*  background-image: url("../images/cityscape-cropped.jpg");
+		background-size:cover;*/
+	}
+	footer > p{
+		padding: 5px;
+	}
+
+	.intro{
+		display: grid;
+		grid-template-columns: 100%;
+
+	}
+
+	.profile-pic{
+		display: block;
+		margin: 0 auto;
+		align-items: auto;
+		width: 80%;
+	}
+
+	.intro-text{
+
+	}
+
+}
+
+
+@media only screen and (max-width:641px) {
+
+	main, nav, footer{
+		background-color:#f9f7f7;
+		width: 100%;
+		padding: 0px 0px 0px 0px;
+		margin: auto;
+	}
+
+	nav{
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: 3em 3em 3em 3em;
+		background-color: #112d4e;
+		padding: 0px 0px 0px 0px;
+	}
+
+	nav a{
+		display: flex;
+		justify-content: center;
+		text-decoration: none;
+		background-color: #dbe2ef;
+		color: #161457;
+	}
+
+	nav a.current-tab{
+		background-color: #3f72af;
+	}
+	nav a:hover {
+		background-color: #3f72af;
+	}
+
+	body{
+  		background-image: none;
+  		padding: 0px 0px 0px 0px;
+  		background-color: #f9f7f7;
+	}
+	footer{
+		display: block;
+		background-color: #dbe2ef;
+		color: white;
+		text-align: center;
+		padding: 0px 0px 0px 0px;
+		background-image: url("../images/cityscape-cropped.jpg");
+		background-size:cover;
+	}
+	footer > p{
+		padding: 5px;
+	}
+
+	.intro{
+		display: grid;
+		grid-template-columns: 100%;
+
+	}
+
+	.profile-pic{
+		display: block;
+		margin: 0 auto;
+		align-items: auto;
+		width: 80%;
+	}
+
+.movie-grid{
+	display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+}
