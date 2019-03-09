@@ -163,8 +163,8 @@ footer > p{
 	padding-bottom: 10px;
 }
 
-@media only screen and ((max-width:861px) or (orientation: landscape) {
-
+@media only screen and (max-width:861px) {
+ 
 	main, nav, footer{
 		background-color:#f9f7f7;
 		width: 90%;
