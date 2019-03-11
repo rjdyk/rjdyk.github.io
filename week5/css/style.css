@@ -19,6 +19,11 @@ h3{
 	font-size: 1.2em;
 }
 
+.logo{
+	object-fit: cover
+	width: 1.5em;
+	height: 1.5em;
+}
 
 body{
   background-image: url("../images/cityscape.jpg");
