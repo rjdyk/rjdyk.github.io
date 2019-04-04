@@ -19,8 +19,10 @@
 		function init(){
             let canvasDiv = document.getElementById('canvasDiv');
             c = document.createElement('canvas');
-            // c.setAttribute('width', document.width * .8);
-            // c.setAttribute('height', document.height * .8);
+            c.setAttribute('width', window.screen.width * .8);
+            c.setAttribute('height', window.screen.height * .8);
+            // c.style.width = Number(window.screen.width * .8);
+            // c.style.height = Number(window.screen.height * .8);
             c.style.border = '1px solid black';
             c.setAttribute('id', 'canvas');
             canvasDiv.appendChild(c);
@@ -33,6 +35,12 @@
 
             c.addEventListener("mousemove", function (e) {
                draw(e);
+            }, false);
+            c.addEventListener("touchmove", function (e) {
+               draw(e);
+            }, false);
+            c.addEventListener("orientationchange", function (e) {
+               init();
             }, false);
 
 		}
