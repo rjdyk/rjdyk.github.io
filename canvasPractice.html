@@ -4,9 +4,31 @@
 	<meta charset="UTF-8">
 	<title>Drawing</title>
     <style>
-        #canvasDiv{
-            width:80%;
-            height:80%;
+        #colorpicker{
+            display: flex;
+            flex-direction: row;
+            vertical-align: middle;
+        }
+        #colorpicker > div{
+            height: 3em;
+            width: 3em;
+            margin: .5em;
+            border: 1px solid black;
+        }
+        #colorpicker > p{
+            margin: .25em;
+        }
+        #red{
+            background-color: #FF0000;
+        }
+        #blue{
+            background-color: #0000FF;
+        }
+        #green{
+            background-color: #00FF00;
+        }
+        #yellow{
+            background-color: #FFFF00;
         }
     </style>
 </head>
@@ -14,15 +36,14 @@
 
 	<script>
 
-		var ctx, c, pensize = 5;
-
+		var ctx, c, r, g, b, y, currentColor, pensize = 5;
 		function init(){
+            //initColorPicker()
             let canvasDiv = document.getElementById('canvasDiv');
             c = document.createElement('canvas');
             c.setAttribute('width', window.screen.width * .8);
-            c.setAttribute('height', window.screen.height * .8);
-            // c.style.width = Number(window.screen.width * .8);
-            // c.style.height = Number(window.screen.height * .8);
+            c.setAttribute('height', window.screen.height * .75);
+
             c.style.border = '1px solid black';
             c.setAttribute('id', 'canvas');
             canvasDiv.appendChild(c);
@@ -40,16 +61,38 @@
                draw(e);
             }, false);
             c.addEventListener("orientationchange", function (e) {
-               init();
+                c.remove()
+                init();
+            }, false);
+            c.addEventListener("devicechange", function (e) {
+                c.remove()
+                init();
             }, false);
 
-		}
+            r = document.getElementById('red');            
+            b = document.getElementById('blue');   
+            g = document.getElementById('green');
+            y = document.getElementById('yellow');
 
+            r.addEventListener('click', function(){
+                ctx.fillStyle = "#FF0000";
+            }, false);
+            b.addEventListener('click', function(){
+                ctx.fillStyle = "#0000FF";
+            }, false);
+            g.addEventListener('click', function(){
+                ctx.fillStyle = "#00FF00";
+            }, false);
+            y.addEventListener('click', function(){
+                ctx.fillStyle = "#FFFF00";
+            }, false);
+
+
+		}
 
         function draw(e){
         	cursorX = e.clientX - c.offsetLeft;
     		cursorY = e.clientY - c.offsetTop;
-    		document.getElementById('demo').innerHTML = cursorX +' ' + cursorY;
     		ctx.beginPath();
     		ctx.arc(cursorX, cursorY, pensize, 0, 2 * Math.PI);
     		ctx.fill();
@@ -64,9 +107,11 @@
                     break;
                 case 82: //red
                     ctx.fillStyle = "#FF0000";
+                    setColor('red');
                     break;
                 case 89: //yellow
                     ctx.fillStyle = "#FFFF00";
+                    setColor('yellow');
                     break;
                 case 66: //blue
                     ctx.fillStyle = "#0000FF";
@@ -85,11 +130,17 @@
 
 	</script>
     <div id='canvasDiv'></div>
-<!-- 	<canvas id="myCanvas" onmousemove="draw(event)"></canvas> -->    
+    <div id='colorpicker'>
+        <div id='red'></div>
+        <div id='blue'></div>
+        <div id='green'></div>
+        <div id='yellow'></div>
+        <p> Move the cursor around the canvas to draw pretty pictures!<br>
+           You can change the colors too: (r)ed, (b)lue, (g)reen, (y)ellow!<br>
+           You can change the size of the pen with the up and down arrow keys!</p>
+    </div>
     <p id='demo'></p>
-	<p> Move the cursor around the canvas to draw pretty pictures!</p>
-	<p> You can change the colors too: (r)ed, (b)lue, (g)reen, (y)ellow!</p>
-	<p> You can change the size of the pen with the up and down arrow keys!</p>
+
 
 </body>
 </html>
