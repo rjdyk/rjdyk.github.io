@@ -32,63 +32,72 @@
         }
     </style>
 </head>
-<body onload="init()"  onkeypress="keypress(event)"> 
+<body> 
+
+    <div id='canvasDiv'></div>
+    <div id='colorpicker'>
+        <div id='red'></div>
+        <div id='blue'></div>
+        <div id='green'></div>
+        <div id='yellow'></div>
+        <p> Move the cursor around the canvas to draw pretty pictures!<br>
+           You can change the colors too: (r)ed, (b)lue, (g)reen, (y)ellow!<br>
+           You can change the size of the pen with the up and down arrow keys!</p>
+    </div>
+    <p id='demo'></p>
 
 	<script>
 
 		var ctx, c, r, g, b, y, currentColor, pensize = 5;
-		function init(){
-            //initColorPicker()
-            let canvasDiv = document.getElementById('canvasDiv');
-            c = document.createElement('canvas');
-            c.setAttribute('width', window.screen.width * .8);
-            c.setAttribute('height', window.screen.height * .75);
 
-            c.style.border = '1px solid black';
-            c.setAttribute('id', 'canvas');
-            canvasDiv.appendChild(c);
-			ctx = c.getContext("2d");
-	        ctx.fillStyle = "#FF0000";
+        let canvasDiv = document.getElementById('canvasDiv');
+        c = document.createElement('canvas');
+        c.setAttribute('width', window.screen.width * .8);
+        c.setAttribute('height', window.screen.height * .75);
 
-            c.addEventListener("keyup", function (e) {
-               keypress(e);
-            }, false);
+        c.style.border = '1px solid black';
+        c.setAttribute('id', 'canvas');
+        canvasDiv.appendChild(c);
+		ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
 
-            c.addEventListener("mousemove", function (e) {
-               draw(e);
-            }, false);
-            c.addEventListener("touchmove", function (e) {
-               draw(e);
-            }, false);
-            c.addEventListener("orientationchange", function (e) {
-                c.remove()
-                init();
-            }, false);
-            c.addEventListener("devicechange", function (e) {
-                c.remove()
-                init();
-            }, false);
+        c.addEventListener("keyup", function (e) {
+           keypress(e);
+        }, false);
 
-            r = document.getElementById('red');            
-            b = document.getElementById('blue');   
-            g = document.getElementById('green');
-            y = document.getElementById('yellow');
+        c.addEventListener("mousemove", function (e) {
+           draw(e);
+        }, false);
+        c.addEventListener("touchmove", function (e) {
+           draw(e);
+        }, false);
+        c.addEventListener("orientationchange", function (e) {
+            reload();
+        }, false);
+        c.addEventListener("devicechange", function (e) {
+            c.remove()
+            init();
+        }, false);
 
-            r.addEventListener('click', function(){
-                ctx.fillStyle = "#FF0000";
-            }, false);
-            b.addEventListener('click', function(){
-                ctx.fillStyle = "#0000FF";
-            }, false);
-            g.addEventListener('click', function(){
-                ctx.fillStyle = "#00FF00";
-            }, false);
-            y.addEventListener('click', function(){
-                ctx.fillStyle = "#FFFF00";
-            }, false);
+        r = document.getElementById('red');            
+        b = document.getElementById('blue');   
+        g = document.getElementById('green');
+        y = document.getElementById('yellow');
+
+        r.addEventListener('click', function(){
+            ctx.fillStyle = "#FF0000";
+        }, false);
+        b.addEventListener('click', function(){
+            ctx.fillStyle = "#0000FF";
+        }, false);
+        g.addEventListener('click', function(){
+            ctx.fillStyle = "#00FF00";
+        }, false);
+        y.addEventListener('click', function(){
+            ctx.fillStyle = "#FFFF00";
+        }, false);
 
 
-		}
 
         function draw(e){
         	cursorX = e.clientX - c.offsetLeft;
@@ -100,7 +109,7 @@
 
 
 
-        document.onkeydown = function(e) {
+        function keypress(e) {
             switch (e.keyCode) {
                 case 32:
                     ctx.clearRect(0,0,c.width,c.height);
@@ -129,18 +138,6 @@
         };
 
 	</script>
-    <div id='canvasDiv'></div>
-    <div id='colorpicker'>
-        <div id='red'></div>
-        <div id='blue'></div>
-        <div id='green'></div>
-        <div id='yellow'></div>
-        <p> Move the cursor around the canvas to draw pretty pictures!<br>
-           You can change the colors too: (r)ed, (b)lue, (g)reen, (y)ellow!<br>
-           You can change the size of the pen with the up and down arrow keys!</p>
-    </div>
-    <p id='demo'></p>
-
 
 </body>
 </html>
