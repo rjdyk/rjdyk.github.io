@@ -61,8 +61,8 @@
 		ctx = c.getContext("2d");
         ctx.fillStyle = "#FF0000";
 
-        c.addEventListener("keyup", function (e) {
-           keypress(e);
+        document.addEventListener("keyup", function (e) {
+            keypress(e);
         }, false);
 
         c.addEventListener("mousemove", function (e) {
@@ -71,10 +71,10 @@
         c.addEventListener("touchmove", function (e) {
            draw(e);
         }, false);
-        c.addEventListener("orientationchange", function (e) {
+        document.addEventListener("orientationchange", function (e) {
             reload();
         }, false);
-        c.addEventListener("devicechange", function (e) {
+        document.addEventListener("devicechange", function (e) {
             c.remove()
             init();
         }, false);
@@ -97,8 +97,6 @@
             ctx.fillStyle = "#FFFF00";
         }, false);
 
-
-
         function draw(e){
         	cursorX = e.clientX - c.offsetLeft;
     		cursorY = e.clientY - c.offsetTop;
@@ -107,20 +105,17 @@
     		ctx.fill();
         }
 
-
-
         function keypress(e) {
+            console.log(e.keyCode)
             switch (e.keyCode) {
                 case 32:
                     ctx.clearRect(0,0,c.width,c.height);
                     break;
                 case 82: //red
                     ctx.fillStyle = "#FF0000";
-                    setColor('red');
                     break;
                 case 89: //yellow
                     ctx.fillStyle = "#FFFF00";
-                    setColor('yellow');
                     break;
                 case 66: //blue
                     ctx.fillStyle = "#0000FF";
