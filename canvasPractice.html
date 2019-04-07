@@ -55,6 +55,9 @@
         c.setAttribute('width', window.screen.width * .8);
         c.setAttribute('height', window.screen.height * .75);
 
+        console.log(window.screen.width + " " + window.screen.height);
+        console.log(c.width + " " + c.height);
+
         c.style.border = '1px solid black';
         c.setAttribute('id', 'canvas');
         canvasDiv.appendChild(c);
@@ -64,19 +67,22 @@
         document.addEventListener("keyup", function (e) {
             keypress(e);
         }, false);
-
         c.addEventListener("mousemove", function (e) {
+            console.log('Mouse');
+            console.log(e.clientX);
            draw(e);
         }, false);
         c.addEventListener("touchmove", function (e) {
-           draw(e);
+            console.log(e);
+            console.log(e.targetTouches[0].clientX);
+           drawTouch(e);
         }, false);
-        document.addEventListener("orientationchange", function (e) {
-            reload();
+        window.addEventListener("orientationchange", function (e) {
+            location.reload();
         }, false);
-        document.addEventListener("devicechange", function (e) {
-            c.remove()
-            init();
+        window.addEventListener("devicechange", function (e) {
+            location.console.log('HERE');
+            // reload();
         }, false);
 
         r = document.getElementById('red');            
@@ -103,6 +109,13 @@
     		ctx.beginPath();
     		ctx.arc(cursorX, cursorY, pensize, 0, 2 * Math.PI);
     		ctx.fill();
+        }
+        function drawTouch(e){
+            cursorX = e.targetTouches[0].clientX - c.offsetLeft;
+            cursorY = e.targetTouches[0].clientY - c.offsetTop;
+            ctx.beginPath();
+            ctx.arc(cursorX, cursorY, pensize, 0, 2 * Math.PI);
+            ctx.fill();
         }
 
         function keypress(e) {
