@@ -68,13 +68,9 @@
             keypress(e);
         }, false);
         c.addEventListener("mousemove", function (e) {
-            console.log('Mouse');
-            console.log(e.clientX);
            draw(e);
         }, false);
         c.addEventListener("touchmove", function (e) {
-            console.log(e);
-            console.log(e.targetTouches[0].clientX);
            drawTouch(e);
         }, false);
         window.addEventListener("orientationchange", function (e) {

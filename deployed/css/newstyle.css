@@ -1,0 +1,238 @@
+/*f9f7f7
+dbe2ef
+3f72af
+112d4e*/
+
+/*
+222222
+045757
+044343
+e4e4e4
+*/
+
+html, body{
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, button, form{
+	font-family: 'Josefin Slab', serif;
+}
+h1{
+	font-size: 52pt;
+}
+h2{
+	font-size: 36pt;
+}
+a, p, button{
+	font-size: 16pt;
+	text-decoration: none;
+	color: #e4e4e4;
+}
+
+a.hidden{
+  position: relative;
+  left: -2000px;
+}
+a.hidden:focus{
+  position: static;
+}
+
+.buffer{
+	background-color: #E4E4E4;
+	height: 2px;
+}
+.buffer2{
+	background-color: #045757;
+	height: 2px;
+}
+
+#navbar{
+	display: grid;
+	z-index: 1;
+	grid-template-columns: 20% auto;
+	height: auto;
+	background-color: #044343;
+	color: #e4e4e4;
+}
+#navbar > p, #navbar> nav > p{
+	padding: .5em;
+	color: #E4E4E4;
+}
+#navbar> nav > p{
+	text-align: right;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.intro{
+	height: 600px;
+	background-image: url("../images/intro_img.jpg");
+	background-size: 100% 100%;
+	line-height: auto;
+	color: #222222;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.intro > h1{
+	position: relative;
+	width: 80%;
+	left: 10%;
+	top: 20%;
+}
+.intro > p, .intro > p> a{
+	position: relative;
+	width: 80%;
+	font-size: 24pt;
+	top: 20%;
+	color: #222222;
+
+}
+
+.about{
+	background-color: #045757;
+	height: auto;
+}
+.about > p{
+	padding: 40px 0px;
+	font-size: 18pt;
+	vertical-align: middle;
+	color: #e4e4e4;
+	width: 70%;
+	height: 70%;
+	margin: auto;
+}
+
+.experience{
+	background-color: #e4e4e4;
+	height: auto;
+	color: #222222;
+
+}
+.experience > h2, p{
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 40px;
+	color: #222222;
+}
+
+.experience-grid{
+	width: 80%;
+	position: relative ;
+	top:10%;
+	margin: auto;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 33% auto 33%;
+}
+
+.flip-card-front > img{
+	width:180px;
+	height:180px;
+	margin: auto;
+	padding-top: 25px;
+}
+.flip-card-back > p{
+	color: #E4E4E4;
+}
+
+#hyperloop_img{
+	background-color:#002E5F;
+}
+#revo_img{
+	background-color:black;
+}
+
+/*-------------------------------------*/
+
+
+.accordion{
+	background-color: #045757;
+	color: #E4E4E4;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.8s;
+}
+
+.secondary{
+	cursor: pointer;
+	font-size: 12pt;
+	padding: 12px 24px;
+	transition: 0.8s;
+}
+
+.active, .accordion:hover {
+	background-color: #044343;
+}
+.panel{
+	padding: 0 0 0 12px;
+	background-color: #E4E4E4;
+	display: none;
+	overflow: hidden;
+}
+.secondary_panel{
+	padding: 8px 0;
+}
+.secondary_panel > p{
+	font-size: 14pt;
+	padding:0;
+	left: 0;
+}
+
+.accordion:after {
+	content: "▼"; 
+	font-size: 12pt;
+	color: #efefef;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	font-size: 12pt;
+ 	content: "▲"; 
+}
+
+footer{
+	display: grid;
+	grid-template-columns: 60% auto;
+	height: auto;
+	background-color: #044343;
+	color: #e4e4e4;
+}
+footer > p{
+	font-size: 14pt;
+	padding: 1.5em 0;
+	color: #E4E4E4;
+}
+
+.footer-links{
+	color: #E4E4E4;
+	padding: 5px;
+	font-size: 28pt;
+	float: right;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.experience-grid{
+		width: 80%;
+		position: relative ;
+		margin: auto;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: 100%;
+		grid-template-rows: 33% auto 33%;
+	}
+
+
+
+}

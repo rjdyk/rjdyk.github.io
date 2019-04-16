@@ -1,0 +1,55 @@
+.hb-intro{
+	background-image: url("../images/experiences/hb-banner.png");
+}
+
+.hb-about{
+	height: auto;
+}
+
+
+.revo-intro{
+	background-image: url("../images/experiences/revo-banner.jpg");
+}
+.revo-intro > h1{
+	color: #E4E4E4;
+}
+
+.hyperloop-intro{
+	background-image: url("../images/experiences/hyperloop-banner.jpg");
+}
+
+.hyperloop-intro > h1{
+	color: #222222;
+	top: 75%;
+}
+
+
+.flip-card-back > h3{
+	font-size: 20px;
+	padding-top: 16px;
+}
+.exp-graphic{
+	vertical-align: center;
+	color: #044343;
+	font-size: 80pt;
+	padding-top: 60px;
+}
+
+@media only screen and (max-width: 768px) {
+	.hb-intro{
+		background-image: url("../images/experiences/hb.png");
+	}
+	.revo-intro{
+		background-image: url("../images/experiences/Revo-logo.jpg");
+	}
+	.revo-intro > h1{
+		visibility: hidden;
+	}
+	.hyperloop-intro{
+		background-image: url("../images/experiences/hyperloop.png");
+	}
+	.hyperloop-intro > h1{
+		visibility: hidden;
+	}
+
+}
