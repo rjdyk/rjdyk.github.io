@@ -1,4 +1,4 @@
-const googleBooksKey = 'AIzaSyCUK2RdQ7yS0TS9kGI5608kHodlNdJ6Zvg';
+const googleBooksKey = 'TODO';
 
 let books_read = [
   {
