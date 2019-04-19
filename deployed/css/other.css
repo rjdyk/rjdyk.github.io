@@ -1,0 +1,84 @@
+@import "../external/bootstrap/css/bootstrap.min.css"
+
+.book-intro{
+	height: 400px;
+	background-image: url("../images/books/book-banner.png");
+}
+.books-read{
+	background-color: #222222;
+}
+
+.books-read > h1{
+	color: #E4E4E4;
+	padding: 20px 20px 0 20px;
+	display: block;
+	margin: auto;
+}
+
+#read-grid{
+	display: grid;
+	grid-template-columns: 33% auto 33%;
+}
+
+.book{
+	margin: 1rem;
+	border: 1px solid #E4E4E4;
+	background: #E4E4E4;
+	border-radius: 12px;
+	overflow: hidden;
+	transition: all .2s linear;
+}
+.book:hover {
+	box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+	transform: translate3D(0, -5px, 0);
+}
+
+
+.book > img{
+	width: 80%;
+	display: block;
+	margin: auto;
+	padding: 10% 0; 
+}
+
+.book > h1{
+	font-size: 32pt;
+	display: block;
+	margin: auto;
+	padding: 5% ;
+}
+.book > p{
+	padding: 10%;
+}
+
+.movie-intro{
+	height: 400px;
+	background-image: url("../images/movies/movie-banner.png");
+}
+.movie-intro >h1{
+	color: #E4E4E4;
+}
+.movie-exp{
+	background: #222222;
+}
+.movie-exp > h2{
+	color: #E4E4E4;
+}
+.fav-grid{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+}
+.movie-item > img{
+	padding:10%;
+	width: 80%;
+}
+
+@media only screen and (max-width: 768px) {
+	#read-grid{
+		display: grid;
+		grid-template-columns: 100%;
+	}
+	.favMovies{
+		grid-template-columns: 50% 50%;
+	}
+}

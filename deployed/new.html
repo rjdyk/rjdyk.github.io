@@ -13,17 +13,18 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
     <script src="js/accordion.js"></script>
     <script src="js/sticky_scroll.js"></script>
+    <script src="js/type_writer.js"></script>
     <title>About me</title>   
 </head>
 
 <!----------------------------------------------------------------------------->
-<body onload="accordion(), sticky_scroll()">
+<body onload="accordion(), sticky_scroll(), typeWriter()">
 <a href="#main-content" class="hidden">Skip to Content</a>
 <!----------------------------------------------------------------------------->
 <div id="navbar">
     <p> <a href="#main-content">RJD</a> </p>
     <nav>
-        <p> WORK | OTHER</p>
+        <p> <a href="#exp">WORK</a> | <a href="#fun">OTHER</a></p>
     </nav>
 </div>
 <div class='buffer'></div>
@@ -32,7 +33,7 @@
 <main id="main-content">
     <div class='intro'>
         <h1> Hi I'm Jonah</h1>
-        <p> computer science student @ <a href="https://umich.edu">uofm</a> </p>
+        <p id="typewriter"> <!-- computer science student @ <a href="https://umich.edu">uofm</a> --> </p>
     </div>
 
     <div class='about'>
@@ -44,7 +45,7 @@
 
     </div>
 
-    <div class='experience'>
+    <div class='experience' id="exp">
         <h2> My Experiences </h2>
         <p> My experiences on campus have been to grow as a leader and a 
             developer to further my passions of technology and human 
@@ -154,7 +155,7 @@
 
     <div class='buffer2'></div>
 
-    <div class='experience'>
+    <div class='experience' id="fun">
         <h2>Just for Fun</h2>
         <p> I’m always obsessively learning and trying to come up with fun new 
             activities. Here are a few things I’m tracking right now.</p>
@@ -162,17 +163,18 @@
 
         <div class="experience-grid">
 
-
-            <div class="grid-item flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <i class="fas fa-book exp-graphic"></i>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Reading</h3>
+            <a href="other/books.html">
+                <div class="grid-item flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="fas fa-book exp-graphic"></i>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Reading</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <a href="experience/revolution.html">
                 <div class="grid-item flip-card">
@@ -188,17 +190,18 @@
                 </div>
             </a>
 
-            <div class="grid-item flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <i class="fas fa-film exp-graphic"></i>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Films</h3>
+            <a href="other/movies.html">
+                <div class="grid-item flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="fas fa-film exp-graphic"></i>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Films</h3>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            </a>
         </div>
 
     </div>

@@ -13,6 +13,13 @@
 .revo-intro > h1{
 	color: #E4E4E4;
 }
+.video{
+	background: black;
+}
+video{
+	display: block;
+	margin: auto;
+}
 
 .hyperloop-intro{
 	background-image: url("../images/experiences/hyperloop-banner.jpg");
@@ -23,6 +30,37 @@
 	top: 75%;
 }
 
+.what-is-hyperloop{
+	display: grid;
+	grid-template-columns: 60% auto;
+}
+#hyperloopalpha{
+	max-width: 80%;
+	padding: 40px 10px;
+}
+#spaceX-hyperloop{
+	background-color: #222222;
+	height: auto;
+
+}
+.what-i-do-hyperloop{
+	background-color: #045757;
+}
+.what-i-do-hyperloop > h2, .what-i-do-hyperloop > p{
+	color: #E4E4E4;
+}
+.what-i-do-hyperloop > p, .what-is-hyperloop > p{
+	padding-bottom: 40px;
+}
+
+#spaceX-hyperloop-img{
+	width: 80%;
+	text-align: center;
+	height: auto;
+	padding: 5% 0;
+	display: block;
+	margin: auto;
+}
 
 .flip-card-back > h3{
 	font-size: 20px;
@@ -50,6 +88,15 @@
 	}
 	.hyperloop-intro > h1{
 		visibility: hidden;
+	}
+	.what-is-hyperloop{
+		display: inline-block;
+	}
+	#hyperloopalpha{
+		display: block;
+		max-width: 80%;
+		padding: 0 0 30px 0;
+		margin: auto;
 	}
 
 }
