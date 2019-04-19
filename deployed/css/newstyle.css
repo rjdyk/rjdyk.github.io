@@ -219,9 +219,12 @@ footer > p{
 	padding: 5px;
 	font-size: 28pt;
 	float: right;
+	border: none;
 }
 
-
+.hide{
+	visibility: hidden;
+}
 @media only screen and (max-width: 768px) {
 	.experience-grid{
 		width: 80%;
