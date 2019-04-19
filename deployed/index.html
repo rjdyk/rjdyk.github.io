@@ -2,52 +2,249 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="images/signature_vertical_U_white.png" />
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/flipcard.css">
+    <link rel="stylesheet" type="text/css" href="css/experiences.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Ubuntu|Montserrat" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <title>About me</title>   
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <script src="js/accordion.js"></script>
+    <script src="js/sticky_scroll.js"></script>
+    <script src="js/type_writer.js"></script>
+    <title>About me</title> 
 </head>
 
-</body>
+<!----------------------------------------------------------------------------->
+<body onload="accordion(), sticky_scroll(), typeWriter()">
 <a href="#main-content" class="hidden">Skip to Content</a>
-
+<!----------------------------------------------------------------------------->
+<div id="navbar">
+    <p> <a href="#main-content">RJD</a> </p>
     <nav>
-        <img class = "logo" src = "images/image.png" alt = ""/>
-        <a class="current-tab fas fa-chess-king" href = "new.html"> About</a>
-        <a class = "fas fa-chess-knight" href = "experience.html"> Experience</a>
-        <a class = "fas fa-chess-bishop" href = "books.html"> Books</a>
-        <a class = "fas fa-chess-rook" href = "movies.html"> Movies</a>   
+        <p> <a href="#exp">WORK</a> | <a href="#fun">OTHER</a></p>
     </nav>
+</div>
+<div class='buffer'></div>
 
+<!----------------------------------------------------------------------------->
 <main id="main-content">
+    <div class='intro'>
+        <h1> Hi I'm Jonah</h1>
+        <p id="typewriter"> <!-- computer science student @ <a href="https://umich.edu">uofm</a> --> </p>
+    </div>
 
-    <h1>Hi, I'm Jonah</h1>
-    <div class = "intro">
-        <div class = "profile-pic">
-        	<a href="https://www.linkedin.com/in/jonah-dykhuizen/"><img class = "profile-pic" src="images/profile-picture.png" alt="profile picture"></a>
-        </div>
-        <div class = "intro-text">
-        	<p>I'm a student at the University of Michigan studying computer science<br>
-        	I'm passionate about technology and human connection<br>
-        	My current interests are front-end web development and machine learning<br>
-        	This summer I'll be working at Microsoft as a software engineering intern in Cloud &amp; AI<br>
-        	<br>
-            If you want to reach out, feel free to hit me up at <a class = "fas fa-envelope" href="mailto: rjdyk@umich.edu"> rjdyk@umich.edu</a> or check out my <a class = "fab fa-github" href="https://github.com/rjdyk/"> github</a>.
-        	</p>
+    <div class='about'>
+        <p> I'm a developer and designer studying computer science at the
+            university of michigan. I'm passionate about technology, human
+            connection and education. My current interests are front-end web
+            and machine learning. In my freetime I love film, reading, and 
+            travel. </p>
+
+    </div>
+
+    <div class='experience' id="exp">
+        <h2> My Experiences </h2>
+        <p> My experiences on campus have been to grow as a leader and a 
+            developer to further my passions of technology and human 
+            connection. </p>
+
+        <div class="experience-grid">
+            <a href="experience/hackblue.html">
+                <div class="grid-item flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/experiences/hb.png"
+                                 alt="hackblue logo"/>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>HackBlue</h3>
+                            <p> HackBlue is a club I started last year to teach
+                                underserved students how to code and spread a 
+                                love for technology to those who wouldn't 
+                                otherwise have exposure </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="experience/hyperloop.html">
+                <div class="grid-item flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"id="hyperloop_img">
+                            <img src="images/experiences/hyperloop.png"
+                                 alt="bond logo" />
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Hyperloop</h3>
+                            <p>Michigan Hyperloop is designing the way for a new 
+                                form of transportation to connect people and ideas 
+                                for quickly, efficiently and easily</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <div class="grid-item flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/experiences/bond.png"
+                             alt="bond logo"/>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>BOND</h3>
+                        <p>Bond Consulting is a student-run consulting club 
+                        solving the most pressing business problems for local 
+                        businesses and nonprofits.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
+    <div class='coursework'>
+        <button class="accordion"> Coursework </button>
+
+            <div class="panel">
+                <button class="accordion secondary"> EECS 388 - Computer Security</button>
+                <div class="panel secondary_panel">
+                    <p> This course introduces the principles and practices of 
+                    computer security as applied to software, host systems, and 
+                    networks. It covers the foundations of building, using and 
+                    managing secure systems. Topics include standard 
+                    cryptographic functions and protocols, threats and defenses 
+                    for real-world systems, incident response and computer 
+                    forensics.</p>
+                </div>
+            
+
+                <button class="accordion secondary"> SI 339 - Web Design and Accessibility</button>
+                <div class="panel secondary_panel">
+                    <p> This course provides a hands-on approach to learning 
+                    responsive, accessible front-end programming for Web Design. 
+                    Topics covered include HTML5, CSS3 (including Bootstrap 
+                    framework), JavaScript, and the POUR design principles of 
+                    accessible design </p>
+                </div>
+
+                <button class="accordion secondary"> EECS 498 - Conversational AI</button>
+                <div class="panel secondary_panel">
+                    <p> This course is a special topic major design experience 
+                        course on conversational AI. From the basis of Natural 
+                        Language Processing to cutting edge Conversational AI 
+                        stacks, students learn conversational AI principles and 
+                        apply them to a project of their choosing </p>
+                </div>
+
+                <button class="accordion secondary"> PHIL 440 - Philosophy of Film</button>
+                <div class="panel secondary_panel">
+                    <p> This course interrogates the medium of film as an artform
+                        and it's influence on contemporary culutre. Since there 
+                        is no form of art and communication more central to 
+                        contemporary life than film (more crucial to the fabric 
+                        of our beliefs, ideologies, enjoyment, politics, 
+                        advertisements) these features of the medium have been 
+                        discussed with considerable urgency throughout film 
+                        history. </p>
+                </div>
+            </div>
+
+    </div>
+
+    <div class='buffer2'></div>
+
+    <div class='experience' id="fun">
+        <h2>Just for Fun</h2>
+        <p> I’m always obsessively learning and trying to come up with fun new 
+            activities. Here are a few things I’m tracking right now.</p>
+
+
+        <div class="experience-grid">
+
+            <a href="other/books.html">
+                <div class="grid-item flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="fas fa-book exp-graphic"></i>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Reading</h3>
+                            <p> I love to read but I've found I haven't really
+                                been focusing enough time to do so. This year I'm
+                                trying to track all the books I read!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="experience/revolution.html">
+                <div class="grid-item flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" id="revo_img">
+                            <img src="images/experiences/Revo-logo.jpg"
+                                 alt="revolution logo"/>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Revolution</h3>
+                            <p>Revolution is my Chinese Yo-yo club. We practice
+                                twice a week for two hours and perform all around
+                            the midwest </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="other/movies.html">
+                <div class="grid-item flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="fas fa-film exp-graphic"></i>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Films</h3>
+                            <p> I love watching and talking about movies. This 
+                                semester I'm taking a philosophy of film class 
+                                that I really enjoy!</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
 </main>
+<!----------------------------------------------------------------------------->
+<footer>
+    <p> The will to win is easy, the will to prepare is difficult <br>
+        Created by Jonah Dykhuizen (2019)</p>
+    <p> <a class="social"  
+        href = "https://github.com/rjdyk" aria-label="social-link">
+            <i class="fab fa-github footer-links" aria-hidden="true"></i>
+        </a>
+        <a class="social"
+        href="https://www.linkedin.com/in/jonah-dykhuizen/" aria-label="social-link">
+            <i class="fab fa-linkedin-in footer-links" aria-hidden="true"></i>
+        </a>
+        <a class="social"  
+        href="https://instagram.com/jonah_dykhuizen" aria-label="social-link">
+            <i class="fab fa-instagram footer-links" aria-hidden="true"></i>
+        </a>
+        <a class="social" 
+        href = "https://twitter.com/jonah_dykhuizen" aria-label="social-link">
+            <i class="fab fa-twitter footer-links" aria-hidden="true"></i>
+        </a>
+        <a class="social" 
+        href="mailto: rjdyk@umich.edu" aria-label="social-link">
+            <i class="far fa-envelope footer-links" aria-hidden="true"></i>
+        </a>
+    </p>
+</footer>
 
 </body>
+<!----------------------------------------------------------------------------->
 
-<footer>
-	<p> The will to win is easy, the will to prepare is difficult </p>
-    <p> Created by Jonah Dykhuizen</p>
-</footer>
 
 </html>
